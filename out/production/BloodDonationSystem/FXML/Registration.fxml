@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.User.UserSignUpController">
+    <ImageView fx:id="imgBack" fitHeight="740.0" fitWidth="1319.0" pickOnBounds="true" preserveRatio="true" />
+    <Pane layoutX="460.0" prefHeight="740.0" prefWidth="1140.0" style="-fx-border-color: #FF0000; -fx-background-color: #FFFFFF;">
+        <Text fill="RED" layoutX="160.0" layoutY="62.0" smooth="false" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="DONOR REGISTRATION " textAlignment="CENTER">
+            <font>
+                <Font name="Serif Regular" size="24.0" />
+            </font>
+        </Text>
+        <GridPane layoutY="88.0" prefHeight="534.0" prefWidth="481.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="367.0" minWidth="10.0" prefWidth="198.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="283.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NATIONAL ID" textAlignment="CENTER" wrappingWidth="202.0">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NAME" textAlignment="CENTER" wrappingWidth="202.0" GridPane.rowIndex="2">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BLOOD GROUP" textAlignment="CENTER" wrappingWidth="203.0" GridPane.rowIndex="3">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DATE OF DIRTH" textAlignment="CENTER" wrappingWidth="203.0" GridPane.rowIndex="4">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AGE" textAlignment="CENTER" wrappingWidth="203.0" GridPane.rowIndex="5">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GENDER" textAlignment="CENTER" wrappingWidth="201.0" GridPane.rowIndex="6">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CONTACT NO" textAlignment="CENTER" wrappingWidth="200.0" GridPane.rowIndex="7">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ADDRESS" textAlignment="CENTER" wrappingWidth="202.0" GridPane.rowIndex="8">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <TextField fx:id="regId" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" />
+            <TextField fx:id="regName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="regAge" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="regContactNo" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <DatePicker fx:id="regDateOfBirth" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="regBloodGroup" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="regGender" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" textAlignment="CENTER" wrappingWidth="202.0" GridPane.rowIndex="1">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Text>
+            <TextField fx:id="pass" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="regAddress" prefHeight="25.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        </GridPane>
+        <Button fx:id="registerBtn" layoutX="194.0" layoutY="655.0" mnemonicParsing="false" onMouseClicked="#register" prefHeight="29.0" prefWidth="203.0" style="-fx-background-color: #ff0000;" text="Register">
+            <font>
+                <Font name="Centaur" size="24.0" />
+            </font>
+        </Button>
+        <Pane layoutX="620.0" layoutY="88.0" prefHeight="534.0" prefWidth="465.0" style="-fx-border-color: #FF0000;">
+            <Label layoutX="189.0" layoutY="139.0" text="OLD NUMBER">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <TextField fx:id="oldIdNumber" layoutX="125.0" layoutY="160.0" prefHeight="25.0" prefWidth="215.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+            <Label layoutX="187.0" layoutY="222.0" text="NEW NUMBER">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <TextField fx:id="newIDNumber" layoutX="125.0" layoutY="242.0" prefHeight="25.0" prefWidth="215.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+            <Label prefHeight="82.0" prefWidth="465.0" text="Convert Old National Identification Number to New Identification Number " textAlignment="CENTER" textFill="RED" wrapText="true">
+                <font>
+                    <Font name="Serif Regular" size="18.0" />
+                </font>
+            </Label>
+            <Button layoutX="158.0" layoutY="326.0" mnemonicParsing="false" onAction="#convertID" prefHeight="25.0" prefWidth="150.0" text="CONVERT" textAlignment="CENTER" />
+            <ImageView fx:id="imgId" blendMode="DARKEN" fitHeight="126.0" fitWidth="439.0" layoutX="13.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+            <Text fx:id="validity" fill="#f20000" layoutX="357.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="60.13671875">
+                <font>
+                    <Font name="Serif Regular" size="13.0" />
+                </font>
+            </Text>
+        </Pane>
+    </Pane>
+    <Pane layoutY="740.0" prefHeight="60.0" prefWidth="1600.0" style="-fx-background-color: #FF0000;" />
+</AnchorPane>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.User.UserSignInController">
+    <Pane layoutY="740.0" prefHeight="60.0" prefWidth="1600.0" style="-fx-background-color: #FF0000;" />
+    <ImageView fx:id="imgBack" fitHeight="682.0" fitWidth="1221.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+    <TableView fx:id="bloodBankView" layoutX="1212.0" prefHeight="740.0" prefWidth="388.0">
+        <columns>
+            <TableColumn fx:id="bloodBankCol" prefWidth="207.0" text="BLOOD BANK" />
+            <TableColumn fx:id="contactNumberCol" prefWidth="180.0" text="CONTACT NUMBER" />
+        </columns>
+    </TableView>
+    <Pane prefHeight="60.0" prefWidth="1212.0" style="-fx-background-color: #FF0000;" />
+    <TabPane layoutX="410.0" layoutY="60.0" prefHeight="682.0" prefWidth="803.0" style="-fx-border-color: #FF0000;" tabClosingPolicy="UNAVAILABLE">
+        <Tab closable="false" text="            Welcome            ">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Text fill="RED" layoutX="42.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                    <font>
+                        <Font name="Serif Regular" size="64.0" />
+                    </font>
+                </Text>
+                <Text fill="RED" layoutX="304.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1-PINT">
+                    <font>
+                        <Font name="Serif Regular" size="64.0" />
+                    </font>
+                </Text>
+                <Text fill="RED" layoutX="192.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRANSFUSION">
+                    <font>
+                        <Font name="Serif Regular" size="64.0" />
+                    </font>
+                </Text>
+            </AnchorPane>
+        </Tab>
+        <Tab closable="false" onSelectionChanged="#loadProfile" text="            Profile            ">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Label layoutX="127.0" layoutY="12.0" prefHeight="20.0" prefWidth="16.0" text="ID" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="113.0" layoutY="44.0" prefHeight="20.0" prefWidth="43.0" text="NAME" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="86.0" layoutY="74.0" prefHeight="20.0" prefWidth="99.0" text="BLOOD GROUP" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="82.0" layoutY="105.0" prefHeight="20.0" prefWidth="106.0" text="DATE_OF_BIRTH" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="135.0" prefHeight="20.0" prefWidth="29.0" text="AGE" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="108.0" layoutY="165.0" prefHeight="20.0" prefWidth="55.0" text="GENDER" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="89.0" layoutY="196.0" prefHeight="20.0" prefWidth="92.0" text="CONTACT_NO" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="104.0" layoutY="224.0" prefHeight="20.0" prefWidth="61.0" text="ADDRESS" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="262.0" layoutY="306.0" prefHeight="20.0" prefWidth="113.0" text="DISEASE HISTORY" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="306.0" prefHeight="20.0" prefWidth="206.0" text="PREVIOUS_DONATION_HISTORY" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="48.0" layoutY="256.0" prefHeight="20.0" prefWidth="176.0" text="LAST_DATE_OF_DONATION" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Text fx:id="idProfile" layoutX="285.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="nameProfile" layoutX="285.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="bloodGroupProfile" layoutX="285.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="ageProfile" layoutX="285.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="dateOfBirthProfile" layoutX="285.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="genderProfile" layoutX="285.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="contactNoProfile" layoutX="285.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="addressProfile" layoutX="285.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lastDateOfDonationProfile" layoutX="285.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="250.13671875">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+            <Line endX="687.0" layoutX="107.0" layoutY="297.0" startX="-100.0" />
+            <TableView fx:id="lastDonationView" layoutX="8.0" layoutY="336.0" prefHeight="305.0" prefWidth="210.0">
+              <columns>
+                <TableColumn fx:id="donationHistoryDateCol" editable="false" prefWidth="209.0" text="DATE" />
+              </columns>
+            </TableView>
+            <TableView fx:id="diseaseHistoryView" layoutX="262.0" layoutY="336.0" prefHeight="305.0" prefWidth="528.0">
+               <columns>
+                  <TableColumn fx:id="diseaseHistoryDateCol" editable="false" prefWidth="154.0" text="DATE" />
+                  <TableColumn fx:id="diseaseHistoryDetailsCol" editable="false" minWidth="0.0" prefWidth="373.0" text="DETAILS" />
+               </columns>
+            </TableView>
+            <Line endX="121.0" endY="2.0" layoutX="117.0" layoutY="296.0" startX="121.0" startY="346.0" />
+            </AnchorPane>
+        </Tab>
+        <Tab closable="false" onSelectionChanged="#profileUpdate" text="            Profile Update            ">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="653.0" prefWidth="772.0">
+                <Label layoutX="357.0" layoutY="14.0" text="Profile Update" textFill="RED">
+                    <font>
+                        <Font name="Serif Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Button layoutX="611.0" layoutY="69.0" mnemonicParsing="false" onAction="#updateLastDonation" prefHeight="28.0" prefWidth="176.0" style="-fx-background-color: #FF0000;" text="Update Last Donation">
+                    <font>
+                        <Font name="Serif Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Label layoutX="35.0" layoutY="276.0" text="Disease History">
+                    <font>
+                        <Font name="Serif Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="diseaseHistoryUpdate" layoutX="175.0" layoutY="276.0" prefHeight="361.0" prefWidth="366.0" />
+                <Label layoutX="35.0" layoutY="75.0" text="Last Donation Date">
+                    <font>
+                        <Font name="Serif Bold" size="14.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="lastDonationUpdate" layoutX="174.0" layoutY="71.0" prefHeight="25.0" prefWidth="367.0" />
+                <Button layoutX="611.0" layoutY="429.0" mnemonicParsing="false" onAction="#updateDiseaseHistory" prefHeight="28.0" prefWidth="176.0" style="-fx-background-color: #FF0000;" text="Update Disease History">
+                    <font>
+                        <Font name="Serif Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Line endX="674.0" layoutX="114.0" layoutY="208.0" startX="-100.0" />
+            <Text fx:id="updateDateValidity" fill="RED" layoutX="312.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            </AnchorPane>
+        </Tab>
+        <Tab closable="false" onSelectionChanged="#request" text="               Search              ">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Label layoutX="14.0" layoutY="112.0" prefHeight="20.0" prefWidth="100.0" text="BLOOD GROUP" textAlignment="CENTER">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="51.0" prefHeight="20.0" prefWidth="43.0" text="AREA" textAlignment="CENTER">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="reqBloodGroup" layoutX="123.0" layoutY="110.0" prefHeight="25.0" prefWidth="214.0" />
+                <ComboBox fx:id="reqBloodBank" layoutX="57.0" layoutY="49.0" prefHeight="25.0" prefWidth="282.0" />
+                <TableView fx:id="tableView" layoutX="5.0" layoutY="209.0" prefHeight="435.0" prefWidth="792.0">
+                    <columns>
+                        <TableColumn fx:id="iDCol" prefWidth="225.0" text="ID" />
+                        <TableColumn fx:id="bloodGCol" prefWidth="157.0" text="BLOOD GROUP" />
+                        <TableColumn fx:id="contactNoCol" prefWidth="182.0" text="CONTACT NUMBER" />
+                        <TableColumn fx:id="addressCol" prefWidth="227.0" text="ADDRESS" />
+                    </columns>
+                </TableView>
+                <Button layoutX="525.0" layoutY="74.0" mnemonicParsing="false" onAction="#search" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #FF0000;" text="Search">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

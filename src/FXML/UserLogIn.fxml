@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="525.0" prefWidth="800.0" style="-fx-border-color: #FF0000;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="Controllers.MainController">
+    <ImageView fx:id="imgBack" fitHeight="443.0" fitWidth="800.0" layoutY="7.0" pickOnBounds="true">
+    </ImageView>
+    <Pane layoutY="450.0" prefHeight="77.0" prefWidth="800.0" style="-fx-background-color: #FF0000;">
+        <Text fx:id="quotesTxt" layoutX="16.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              textAlignment="CENTER" wrappingWidth="767.13671875">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+    </Pane>
+    <Text fill="RED" fontSmoothingType="LCD" layoutX="235.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="TRANSFUSION" textAlignment="CENTER">
+        <font>
+            <Font name="Serif Regular" size="48.0"/>
+        </font>
+    </Text>
+    <Text fill="RED" fontSmoothingType="LCD" layoutX="327.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="1-PINT" textAlignment="CENTER">
+        <font>
+            <Font name="Serif Regular" size="48.0"/>
+        </font>
+    </Text>
+    <Pane layoutY="-4.0" prefHeight="47.0" prefWidth="800.0" style="-fx-background-color: #FF0000;">
+        <ToolBar layoutY="4.0" prefHeight="40.0" prefWidth="0.0" style="-fx-background-color: #FF0000;">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Admin LogIn :">
+                <font>
+                    <Font name="Serif Regular" size="12.0"/>
+                </font>
+            </Text>
+            <TextField fx:id="adminUsername" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0"
+                       promptText="UserName"/>
+            <TextField fx:id="adminPassword" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0"
+                       promptText="Password"/>
+            <Button mnemonicParsing="false" onAction="#adminLogIn" prefHeight="25.0" prefWidth="150.0"
+                    style="-fx-background-color: #FF0000;" text="LogIn"/>
+        </ToolBar>
+    </Pane>
+    <Pane layoutX="556.0" layoutY="170.0" prefHeight="280.0" prefWidth="244.0" style="-fx-border-color: #FF0000;">
+        <Button layoutX="50.0" layoutY="230.0" mnemonicParsing="false" onAction="#NewUserSignUp" prefHeight="29.0"
+                prefWidth="145.0" style="-fx-background-color: #FF0000;" text="Sign Up" wrapText="true">
+            <font>
+                <Font name="Serif Regular" size="12.0"/>
+            </font>
+        </Button>
+        <Button layoutX="50.0" layoutY="173.0" mnemonicParsing="false" onAction="#newUserSignIn" prefHeight="29.0"
+                prefWidth="145.0" style="-fx-background-color: #FF0000;" text="Sign In" wrapText="true">
+            <font>
+                <Font name="Serif Regular" size="12.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="userLogInName" layoutX="14.0" layoutY="93.0" prefHeight="25.0" prefWidth="216.0"
+                   promptText="USER NAME"/>
+        <TextField fx:id="userLogInPassword" layoutX="14.0" layoutY="128.0" prefHeight="25.0" prefWidth="216.0"
+                   promptText="PASSWORD"/>
+        <ToolBar layoutX="174.0" layoutY="230.0" prefHeight="30.0" prefWidth="2.0"
+                 style="-fx-background-color: #FF0000;">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New User? Sign Up Here" underline="true">
+                <font>
+                    <Font name="Serif Regular" size="12.0"/>
+                </font>
+            </Text>
+        </ToolBar>
+        <Text fill="RED" layoutX="79.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1-PT USER">
+            <font>
+                <Font name="Serif Regular" size="18.0"/>
+            </font>
+        </Text>
+    </Pane>
+    <Pane layoutX="313.0" layoutY="170.0" prefHeight="280.0" prefWidth="244.0" style="-fx-border-color: #FF0000;">
+        <Button layoutX="50.0" layoutY="199.0" mnemonicParsing="false" onAction="#bloodBankSignIn" prefHeight="29.0"
+                prefWidth="145.0" style="-fx-background-color: #FF0000;" text="Sign In" wrapText="true">
+            <font>
+                <Font name="Serif Regular" size="12.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="bloodBankUserName" layoutX="14.0" layoutY="93.0" prefHeight="25.0" prefWidth="216.0"
+                   promptText="USER NAME"/>
+        <TextField fx:id="bloodBankPassword" layoutX="15.0" layoutY="128.0" prefHeight="25.0" prefWidth="216.0"
+                   promptText="PASSWORD"/>
+        <Text fill="#ee0000" layoutX="64.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLOOD BANK">
+            <font>
+                <Font name="Serif Regular" size="18.0"/>
+            </font>
+        </Text>
+    </Pane>
+</AnchorPane>

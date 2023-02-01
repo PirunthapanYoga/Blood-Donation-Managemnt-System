@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="740.0" prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: #FF0000;" />
+      <Pane prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #FF0000;">
+         <children>
+            <ToolBar layoutX="138.0" layoutY="7.0" prefHeight="51.0" prefWidth="525.0" style="-fx-border-color: #FF0000;">
+               <items>
+                  <Text fill="RED" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="1-PINT  " textAlignment="CENTER">
+                     <font>
+                        <Font name="Serif Regular" size="48.0" />
+                     </font>
+                  </Text>
+                  <Text fill="RED" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="TRANSFUSION" textAlignment="CENTER">
+                     <font>
+                        <Font name="Serif Regular" size="48.0" />
+                     </font>
+                  </Text>
+               </items>
+            </ToolBar>
+         </children>
+      </Pane>
+      <Text layoutX="290.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECENT REQUESTS">
+         <font>
+            <Font name="Serif Regular" size="24.0" />
+         </font>
+      </Text>
+      <TableView layoutX="5.0" layoutY="121.0" prefHeight="575.0" prefWidth="790.0">
+        <columns>
+          <TableColumn fx:id="rrecipientId" prefWidth="195.0" text="ID" />
+          <TableColumn fx:id="recipientBG" minWidth="0.0" prefWidth="169.0" text="BLOOD GROUP" />
+            <TableColumn fx:id="recipientCN" minWidth="8.0" prefWidth="221.0" text="CONTACT NUMBER" />
+            <TableColumn fx:id="recipiemtBB" prefWidth="204.0" text="BLOOD BANK" />
+        </columns>
+      </TableView>
+      <Button layoutX="694.0" layoutY="702.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="30.0" prefWidth="100.0" text="CLOSE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="14.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME :  " wrappingWidth="46.67578125" />
+      <Text layoutX="61.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOGATHASAN PIRUNTHAPAN" />
+   </children>
+</AnchorPane>
